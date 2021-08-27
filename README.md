@@ -1,3 +1,7 @@
+Integrantes:
+Estudiante 1: Lucciano Franco
+Estudiante 2: Lina Ojeda
+
 #ISIS1225 - Estructura de un proyecto
 
 Este proyecto busca mostrar una posible forma de organizar el código que se va a desarrollar en los proyectos del curso.
