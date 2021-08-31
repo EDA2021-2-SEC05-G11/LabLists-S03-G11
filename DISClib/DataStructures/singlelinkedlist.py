@@ -70,7 +70,7 @@ def newList(cmpfunction, key, filename, delim):
                'last': None,
                'size': 0,
                'key': key,
-               'type': 'SINGLE_LINKED'}
+               'type': 'ARRAY_LIST'}
 
     if(cmpfunction is None):
         newlist['cmpfunction'] = defaultfunction
@@ -458,7 +458,7 @@ def subList(lst, pos, numelem):
         sublst = {'first': None,
                   'last': None,
                   'size': 0,
-                  'type': 'SINGLE_LINKED',
+                  'type': 'ARRAY_LIST',
                   'key': lst['key'],
                   'cmpfunction': lst['cmpfunction']}
         cont = 1

@@ -85,7 +85,7 @@ def newMap(numelements, prime, loadfactor, comparefunction):
         hashtable['table'] = lt.newList(datastructure='ARRAY_LIST',
                                         cmpfunction=cmpfunc)
         for _ in range(capacity):
-            bucket = lt.newList(datastructure='SINGLE_LINKED',
+            bucket = lt.newList(datastructure='ARRAY_LIST',
                                 cmpfunction=hashtable['comparefunction'])
             lt.addLast(hashtable['table'], bucket)
         return hashtable
@@ -244,7 +244,7 @@ def keySet(map):
         Exception
     """
     try:
-        ltset = lt.newList('SINGLE_LINKED', map['comparefunction'])
+        ltset = lt.newList('ARRAY_LIST', map['comparefunction'])
         for pos in range(lt.size(map['table'])):
             bucket = lt.getElement(map['table'], pos+1)
             if(not lt.isEmpty(bucket)):
@@ -268,7 +268,7 @@ def valueSet(map):
         Exception
     """
     try:
-        ltset = lt.newList('SINGLE_LINKED', map['comparefunction'])
+        ltset = lt.newList('ARRAY_LIST', map['comparefunction'])
         for pos in range(lt.size(map['table'])):
             bucket = lt.getElement(map['table'], pos+1)
             if (not lt.isEmpty(bucket)):
@@ -295,7 +295,7 @@ def rehash(map):
         capacity = nextPrime(map['capacity']*2)
         oldtable = map['table']
         for _ in range(capacity):
-            bucket = lt.newList(datastructure='SINGLE_LINKED',
+            bucket = lt.newList(datastructure='ARRAY_LIST',
                                 cmpfunction=map['comparefunction'])
             lt.addLast(newtable, bucket)
         map['size'] = 0

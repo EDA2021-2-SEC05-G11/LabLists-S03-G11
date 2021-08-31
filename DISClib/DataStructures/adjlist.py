@@ -178,7 +178,7 @@ def edges(graph):
     """
     try:
         lstmap = map.valueSet(graph['vertices'])
-        lstresp = lt.newList('SINGLE_LINKED', e.compareedges)
+        lstresp = lt.newList('ARRAY_LIST', e.compareedges)
         for lstedge in lt.iterator(lstmap):
             for edge in lt.iterator(lstedge):
                 if (graph['directed']):

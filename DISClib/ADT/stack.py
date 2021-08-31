@@ -36,7 +36,7 @@ assert config
 """
 
 
-def newStack(datastructure='SINGLE_LINKED'):
+def newStack(datastructure='ARRAY_LIST'):
     """ Crea una pila vacia.
 
     Args:

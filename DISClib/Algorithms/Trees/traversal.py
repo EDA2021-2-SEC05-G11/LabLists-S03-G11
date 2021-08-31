@@ -34,7 +34,7 @@ def inorder(omap):
     """
     Implementa un recorrido inorder de un arbol binario
     """
-    lst = lt.newList('SINGLE_LINKED', omap['cmpfunction'])
+    lst = lt.newList('ARRAY_LIST', omap['cmpfunction'])
     if (omap is not None):
         lst = inorderTree(omap['root'], lst)
     return lst
@@ -44,7 +44,7 @@ def preorder(omap):
     """
     Implementa un recorrido preorder de un arbol binario
     """
-    lst = lt.newList('SINGLE_LINKED', omap['cmpfunction'])
+    lst = lt.newList('ARRAY_LIST', omap['cmpfunction'])
     if (omap is not None):
         lst = preorderTree(omap['root'], lst)
     return lst
@@ -54,7 +54,7 @@ def postorder(omap):
     """
     Implementa un recorrido postorder de un arbol binario
     """
-    lst = lt.newList('SINGLE_LINKED', omap['cmpfunction'])
+    lst = lt.newList('ARRAY_LIST', omap['cmpfunction'])
     if (omap is not None):
         lst = postorderTree(omap['root'], lst)
     return lst

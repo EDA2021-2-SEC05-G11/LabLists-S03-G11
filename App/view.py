@@ -25,7 +25,7 @@ import sys
 import controller
 from DISClib.ADT import list as lt
 assert cf
-
+from time import process_time
 
 """
 La vista se encarga de la interacción con el usuario
@@ -90,12 +90,17 @@ while True:
     if int(inputs[0]) == 1:
         print("Cargando información de los archivos ....")
         catalog = initCatalog()
+        t1_array = process_time()
         loadData(catalog)
+        t2_array = process_time()
+
+        print("TIME: " + str(t2_array-t1_array))
         print('Libros cargados: ' + str(lt.size(catalog['books'])))
         print('Autores cargados: ' + str(lt.size(catalog['authors'])))
         print('Géneros cargados: ' + str(lt.size(catalog['tags'])))
         print('Asociación de Géneros a Libros cargados: ' +
               str(lt.size(catalog['book_tags'])))
+            
 
     elif int(inputs[0]) == 2:
         number = input("Buscando los TOP ?: ")

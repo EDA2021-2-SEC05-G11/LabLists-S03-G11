@@ -30,6 +30,7 @@ from DISClib.ADT import list as lt
 from DISClib.Algorithms.Sorting import shellsort as sa
 assert cf
 
+
 """
 Se define la estructura de un catálogo de libros.
 El catálogo tendrá tres listas, una para libros, otra para autores
@@ -52,11 +53,11 @@ def newCatalog():
                'book_tags': None}
 
     catalog['books'] = lt.newList()
-    catalog['authors'] = lt.newList('ARRAY_LIST',
+    catalog['authors'] = lt.newList('SINGLE_LINKED',
                                     cmpfunction=compareauthors)
-    catalog['tags'] = lt.newList('ARRAY_LIST',
+    catalog['tags'] = lt.newList('SINGLE_LINKED',
                                  cmpfunction=comparetagnames)
-    catalog['book_tags'] = lt.newList('ARRAY_LIST')
+    catalog['book_tags'] = lt.newList('SINGLE_LINKED')
 
     return catalog
 
@@ -198,3 +199,4 @@ def comparetagnames(name, tag):
 
 def sortBooks(catalog):
     sa.sort(catalog['books'], compareratings)
+
